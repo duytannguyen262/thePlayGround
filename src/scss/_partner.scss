@@ -1,0 +1,19 @@
+.partner {
+  margin-bottom: 19rem;
+  &__container {
+    max-width: 83rem;
+    text-align: center;
+  }
+  &__title {
+    color: $dark-blue;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 2rem;
+    margin-bottom: 7rem;
+    padding-bottom: 7rem;
+    border-bottom: 2px solid currentColor;
+  }
+  &__list {
+    @include flex(center, space-between);
+  }
+}

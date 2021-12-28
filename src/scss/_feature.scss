@@ -1,0 +1,129 @@
+.feature {
+  padding-top: 18rem;
+  &__item {
+    display: flex;
+    align-items: center;
+    &:nth-child(odd) {
+      .feature__info {
+        padding-left: 10rem;
+      }
+    }
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      .feature__info {
+        padding-right: 10rem;
+      }
+    }
+    padding-bottom: 15rem;
+  }
+  &__info,
+  &__image {
+    width: 50%;
+  }
+
+  &__title {
+    font-size: 4.5rem;
+    color: $dark-blue;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+  }
+  &__desc {
+    color: #969eb6;
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    font-weight: 400;
+    line-height: 1.8;
+  }
+  &-intro {
+    &__item {
+      margin-bottom: 3rem;
+      color: $dark-blue;
+      font-weight: 600;
+      font-size: 1.6rem;
+      &--circle {
+        position: relative;
+        padding-left: 3rem;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 2rem;
+          height: 2rem;
+          background-color: #ff6adf;
+          border-radius: 100%;
+          transform: translateY(-50%);
+        }
+        &:nth-child(2):before {
+          background-color: #92fa3c;
+        }
+        &:nth-child(3):before {
+          background-color: #1ec0f4;
+        }
+        &:last-child:before {
+          background-color: #ff899c;
+        }
+      }
+    }
+  }
+  &-best {
+    &__icon {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 8px;
+      font-size: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: #aee3ea;
+      &--gold {
+        color: #f7c558;
+      }
+      &--lavender {
+        color: #ab73e1;
+      }
+      &--lightgreen {
+        color: #8fcc9b;
+      }
+      position: relative;
+      z-index: 1;
+      &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background-color: currentColor;
+        opacity: 0.25;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+    }
+
+    &__title {
+      font-size: 1.8rem;
+      color: $dark-blue;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      width: 15rem;
+    }
+    &__desc {
+      font-size: 1.5rem;
+      color: #969eb6;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: -5rem;
+    }
+    &__item {
+      width: calc(50% - 3rem);
+      margin-bottom: 5rem;
+    }
+  }
+}

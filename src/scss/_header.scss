@@ -1,0 +1,57 @@
+.header {
+  &__inner {
+    @include flex(center, space-between);
+  }
+
+  &__menu {
+    &-list {
+      @include flex(center);
+      gap: 0 5rem;
+    }
+    &-item {
+      &:last-child {
+        margin-left: 2rem;
+      }
+    }
+    &-link {
+      font-size: 1.6rem;
+      color: $dark-blue;
+      font-weight: 500;
+      transition: all 0.2s linear;
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+  &.open {
+    .burger {
+      &__menu {
+        > span:first-child {
+          transform: rotate(45deg);
+        }
+        > span:nth-child(2) {
+          opacity: 0;
+        }
+        > span:last-child {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+.burger {
+  &__menu {
+    & > span {
+      display: block;
+      width: 3.5rem;
+      height: 0.5rem;
+      background-color: $dark-blue;
+      transition: all 0.3s ease-in-out;
+      transform-origin: 3px 2px;
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

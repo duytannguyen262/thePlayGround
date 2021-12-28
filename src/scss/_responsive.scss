@@ -1,0 +1,260 @@
+@media screen and (max-width: 1023px) {
+  .banner {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    &__hero {
+      font-size: 4rem;
+    }
+    &__desc {
+      font-size: 1.6rem;
+    }
+    &__buttons > .btn {
+      font-size: 1.4rem;
+    }
+  }
+  .category {
+    &__item {
+      width: calc(50% - 22.5px);
+      margin-bottom: 2.5rem;
+    }
+  }
+  .feature {
+    padding-top: 10rem;
+    &__item {
+      flex-direction: column;
+
+      &:nth-child(even) {
+        flex-direction: column;
+        .feature__info {
+          padding: 0;
+        }
+      }
+      &:nth-child(odd) .feature__info {
+        padding: 0;
+      }
+    }
+    &__title {
+      font-size: 3rem;
+    }
+    &__image,
+    &__info {
+      width: 100%;
+    }
+    &__image img {
+      margin: 0 auto 5rem;
+    }
+  }
+  .partner {
+    &__title {
+      padding-bottom: 4rem;
+      margin-bottom: 4rem;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .burger__menu {
+    display: none;
+  }
+  .header {
+    padding-top: 4rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__menu {
+    display: none;
+  }
+  .partner {
+    margin-bottom: 8rem;
+    &__list {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__item {
+      width: 50%;
+      margin-bottom: 3rem;
+      img {
+        margin: 0 auto;
+      }
+    }
+    &__title {
+      line-height: 3rem;
+    }
+  }
+  .connect {
+    margin-bottom: 5rem;
+    &__list {
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: calc(50% - 1rem);
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__title {
+      font-size: 3rem;
+    }
+  }
+  .subscribe {
+    &__container {
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__title {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    &__info {
+      width: 100%;
+    }
+    &__social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      :first-child {
+        margin-left: 0;
+      }
+    }
+  }
+  .footer {
+    &__container {
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: 100%;
+      margin-bottom: 2rem;
+      &:not(:first-child) {
+        width: fit-content;
+      }
+    }
+  }
+  .logo {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    padding-top: 3rem;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 12rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $dark-blue;
+  }
+
+  //animations
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 70%;
+    }
+  }
+
+  .fade-in {
+    animation: fade-in 0.3s ease-in-out forwards;
+    display: block;
+  }
+
+  @keyframes menu-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .menu-fade-in {
+    animation: menu-fade-in 0.3s ease-in-out forwards;
+    display: block;
+  }
+
+  @keyframes fade-out {
+    from {
+      opacity: 70%;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .fade-out {
+    animation: fade-out 0.3s ease-in-out forwards;
+    pointer-events: none;
+  }
+
+  //mobile menu
+  .toggle__menu--mobile {
+    margin-top: 2rem;
+    background: white;
+    padding: 2rem;
+    position: absolute;
+    width: calc(100% - 5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    a {
+      padding: 1.2rem;
+      display: block;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: $dark-blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 593px) {
+  .category {
+    &__item {
+      width: 75%;
+      margin-bottom: 2.5rem;
+    }
+    &__image {
+      height: 100%;
+    }
+    &__list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .banner {
+    &__hero {
+      font-size: 3rem;
+    }
+    &__buttons > .btn {
+      font-size: 1.2rem;
+    }
+  }
+  .subscribe {
+    &__title {
+      font-size: 2rem;
+    }
+  }
+  .logo {
+    font-size: 3rem;
+  }
+  .overlay {
+    margin-top: 10rem;
+  }
+  .burger {
+    &__menu {
+      & > span {
+        width: 2.5rem;
+        height: 0.4rem;
+        transform-origin: 0px 2px;
+      }
+    }
+  }
+}

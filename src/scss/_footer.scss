@@ -1,0 +1,20 @@
+.footer {
+  &__container {
+    @include flex(flex-start, space-between);
+  }
+  &__item {
+    width: 25%;
+  }
+  &__link {
+    color: #192f72;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 3rem;
+    width: fit-content;
+    transition: all 0.1s ease-in;
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
